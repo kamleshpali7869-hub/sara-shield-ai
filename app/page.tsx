@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     if (localStorage.getItem("sara_pro") === "true") setIsPro(true);
     const script = document.createElement("script");
-    script.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&vault=true&intent=subscription,order&currency=USD`;
+    script.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&vault=true&currency=USD&components=buttons`;
     script.async = true;
     script.onload = () => {
       if (!window.paypal) return;
